@@ -68,3 +68,22 @@ body {
 @media screen and (min-width: 1200px) {
   html { font-size: 1.4rem }
 }
+
+/* button styles */
+
+button {
+  width: 100%;
+  padding: .75em;
+  display: block;
+  font-weight: bold;
+  font-size: .625rem;
+  color: var(--white);
+  border-radius: .25em;
+  background-color: var(--primary);
+  transition: .3s ease-in;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--black);
+}

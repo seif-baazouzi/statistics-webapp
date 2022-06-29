@@ -1,3 +1,12 @@
+import Head from "next/head"
+
 export default function Home() {
-  return <h1>Home Page</h1>
+  return (
+    <>
+      <Head>
+        <title>Login</title>
+      </Head>
+      <h1>Home Page</h1>
+    </>
+  )
 }

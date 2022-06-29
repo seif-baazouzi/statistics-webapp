@@ -1,0 +1,31 @@
+.inputBox {
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+.inputBox :is(label, input, span) {
+  width: 100%;
+  display: block;
+  font-size: .75rem;
+}
+
+.inputBox label {
+  font-weight: bold;
+}
+
+.inputBox input {
+  padding: .5em;
+  border-radius: .25em;
+  background-color: var(--gray);
+  border: .125em solid var(--gray);
+}
+
+.inputBox input:focus {
+  border: .125em solid var(--primary);
+}
+
+.inputBox span {
+  color: var(--red);
+  font-weight: bold;
+  font-size: .6rem;
+}
