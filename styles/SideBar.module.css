@@ -1,0 +1,57 @@
+.sideBar {
+  width: 2.25rem;
+  height: calc(100vh - 2.5rem);
+  padding-top: .5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary);
+  position: fixed;
+  bottom: 0; left: 0;
+}
+
+.sideBar svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: .45rem;
+  stroke-width: .06rem;
+  stroke: var(--white);
+  cursor: pointer;
+}
+
+.sideBar svg.active {
+  position: relative;
+  stroke: var(--primary);
+  background-color: var(--gray);
+  border-radius: .5rem;
+}
+
+.sideBar .separator {
+  width: 70%;
+  height: 0.05rem;
+  background-color: var(--gray);
+  opacity: .25;
+  margin-top: auto;
+  justify-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .sideBar {
+    width: 100%;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 0;
+    padding: 0 1rem;
+  }
+
+  .sideBar .separator {
+    height: 70%;
+    width: 0.05rem;
+    background-color: var(--gray);
+    opacity: .25;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}

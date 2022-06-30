@@ -1,0 +1,10 @@
+.nav {
+  height: 2.5rem;
+  padding: 0 .5rem;
+  position: sticky;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}

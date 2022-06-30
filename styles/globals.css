@@ -10,12 +10,12 @@
 }
 
 :root {
-  --primary: #4f4fed;
+  --primary: #5473e8;
   --black: #070d18;
   --dark-gray: #363636;
   --white: #fff;
   --red: #ca3e47;
-  --gray: #ededed;
+  --gray: #f7f7f7;
   --shadow: 0 .025rem .25rem rgba(0, 0, 0, .1);
 }
 
@@ -30,25 +30,11 @@ a {
 }
 
 body {
-  padding: 2rem 0;
   color: var(--black);
   font-family: "Catamaran";
   background-color: var(--white);
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-.container {
-  width: 100%;
-  max-width: 1024px;
-  margin: 1rem auto 5rem;
-  padding: 0 1rem;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* font sizes */
