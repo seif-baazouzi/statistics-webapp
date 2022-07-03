@@ -15,6 +15,7 @@
   --dark-gray: #363636;
   --white: #fff;
   --red: #ca3e47;
+  --green: green;
   --gray: #f7f7f7;
   --shadow: 0 .025rem .25rem rgba(0, 0, 0, .1);
 }
@@ -72,4 +73,54 @@ button {
 button:hover {
   cursor: pointer;
   background-color: var(--black);
+}
+
+button.red {
+  background-color: var(--red);
+}
+
+button.gray {
+  color: var(--dark-gray);
+  background-color: var(--gray);
+}
+
+button:is(.red, .gray):hover {
+  opacity: .8;
+}
+
+.buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttons-row button {
+  width: fit-content;
+  margin-left: .25rem;
+}
+
+/* message container styles */
+
+.message-container {
+  width: 100%;
+  min-height: calc(100vh - 2.5rem);
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.message-container svg {
+  width: 8rem;
+  height: 8rem;
+  stroke: var(--dark-gray);
+}
+
+.message-container h3 {
+  margin: 1rem 0;
+}
+
+.message-container button {
+  width: fit-content;
 }

@@ -38,19 +38,22 @@ export default function Signup() {
               type="text"
               label="Full name"
               error={errors.name}
-              state={[name, setName]}
+              value={name}
+              setValue={setName}
             />
             <Input
               type="text"
               label="E-mail"
               error={errors.email}
-              state={[email, setEmail]}
+              value={email}
+              setValue={setEmail}
             />
             <Input
               type="password"
               label="Password"
               error={errors.password}
-              state={[password, setPassword]}
+              value={password}
+              setValue={setPassword}
             />
             <button>Signup</button>
           </form>

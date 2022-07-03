@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  position: fixed;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .8);
+  box-shadow: var(--shadow);
+}
+
+.close {
+  position: fixed;
+  top: 1rem; right: 2rem;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.box {
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+}

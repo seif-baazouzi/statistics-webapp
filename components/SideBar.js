@@ -6,10 +6,16 @@ import ChartPieIcon from "@heroicons/react/outline/ChartPieIcon"
 import CollectionIcon from "@heroicons/react/outline/CollectionIcon"
 import ViewListIcon from "@heroicons/react/outline/ViewListIcon"
 
+import { clearCookies } from "../utils/cookies"
 import styles from "../styles/SideBar.module.css"
 
 function SideBar() {
   const router = useRouter()
+
+  const logout = () => {
+    clearCookies()
+    router.push("/login")
+  }
 
   return (
     <div className={styles.sideBar}>
@@ -23,7 +29,7 @@ function SideBar() {
         <ChartPieIcon className={router.pathname === "/statistics" ? styles.active : ""} />
       </Link>
       <div className={styles.separator}></div>
-      <LogoutIcon />
+      <LogoutIcon onClick={logout} />
     </div>
   )
 }

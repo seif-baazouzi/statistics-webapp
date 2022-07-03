@@ -37,13 +37,15 @@ export default function Login() {
               type="text"
               label="E-mail"
               error={errors.email}
-              state={[email, setEmail]}
+              value={email}
+              setValue={setEmail}
             />
             <Input
               type="password"
               label="Password"
               error={errors.password}
-              state={[password, setPassword]}
+              value={password}
+              setValue={setPassword}
             />
             <button>Login</button>
           </form>

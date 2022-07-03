@@ -1,0 +1,57 @@
+.collectionsContainer {
+  width: 100%;
+  max-width: 768px;
+  margin: 1rem auto;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listHeader button {
+  width: fit-content;
+}
+
+.collectionsList {
+  width: 100%;
+}
+
+.collectionItem {
+  margin: .25rem 0;
+  padding: .25rem .75rem;
+  list-style: none;
+  border-radius: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+}
+
+.collectionItem p {
+  font-size: .9rem;
+  color: car(--dark-gray);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collectionItem svg {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.collectionItem svg:first-child {
+  margin-right: .25rem;
+  stroke: var(--green);
+}
+
+.collectionItem svg:last-child {
+  stroke: var(--red);
+}
