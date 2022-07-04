@@ -55,3 +55,21 @@
 .collectionItem svg:last-child {
   stroke: var(--red);
 }
+
+.selectCollection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.selectCollection .title {
+  font-size: .7rem;
+  font-weight: bold;
+  color: var(--dark-gray);
+}
+
+.selectCollection select {
+  min-width: 160px;
+  margin-left: .25rem;
+}
