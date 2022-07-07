@@ -9,6 +9,7 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, .8);
   box-shadow: var(--shadow);
+  z-index: 100000;
 }
 
 .close {

@@ -28,7 +28,6 @@ export default function LogsPage({ collectionsList }) {
       if(res.message === "invalid-token") {
         router.push("/login")
       } else {
-        console.log(res);
         setLogs(res.logs)
       }
     })()

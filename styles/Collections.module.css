@@ -60,11 +60,11 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .selectCollection .title {
-  font-size: .7rem;
+  font-size: .6rem;
   font-weight: bold;
   color: var(--dark-gray);
 }
@@ -72,4 +72,8 @@
 .selectCollection select {
   min-width: 160px;
   margin-left: .25rem;
+  padding: .25rem;
+  border-radius: .25rem;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
 }

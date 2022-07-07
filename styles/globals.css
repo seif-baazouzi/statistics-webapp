@@ -20,7 +20,7 @@
   --shadow: 0 .025rem .25rem rgba(0, 0, 0, .1);
 }
 
-input, button {
+input, button, select {
   border: none;
   outline: none;
 }
@@ -122,4 +122,14 @@ button:is(.red, .gray):hover {
 
 .message-container button {
   width: fit-content;
+}
+
+/* charts styles */
+
+.chart-box-container {
+  width: 100%;
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
 }

@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;  
+}
+
+.links p {
+  font-size: .6rem;
+  padding: 0 .25rem;
+  margin: 0 .125rem;
+  font-weight: bold;
+  letter-spacing: .05em;
+  cursor: pointer;
+}
+
+.links p.active {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.container input {
+  padding: .25rem;
+  border-radius: .25rem;
+  box-shadow: var(--shadow);
+}

@@ -7,4 +7,5 @@
   align-items: center;
   box-shadow: var(--shadow);
   background-color: var(--white);
+  z-index: 1000;
 }

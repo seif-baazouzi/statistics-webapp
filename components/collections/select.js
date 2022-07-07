@@ -4,7 +4,7 @@ export default function SelectCollection({ collectionsList, setSelectedCollectio
   return (
     <div className={styles.selectCollection}> 
       <p className={styles.title}>Collections List</p>  
-      <select onChange={(e) => { console.log(e.target.value); setSelectedCollection(e.target.value) }}>
+      <select onChange={(e) => setSelectedCollection(e.target.value)}>
         {collectionsList.map(collection => (
           <option
             key={collection.collectionID}
