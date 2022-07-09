@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .5rem 0;
+}
+
+.listHeader button {
+  width: fit-content;
+}
+
+.table {
+  width: 100%;
+  background-color: var(--white);
+  overflow-x: auto;
+  border-radius: .125rem;
+  box-shadow: var(--shadow);
+}
+
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table table th {
+  text-align: left;
+  font-size: .75rem;
+  color: var(--dark-gray);
+}
+
+.table table :is(td, th) {
+  padding: .5rem 1rem;
+} 
+
+.table table tbody tr:hover {
+  background-color: var(--gray);
+}
+
+.table table td {
+  font-size: .75rem;
+  padding: .5rem 1rem;
+  border-top: .075rem solid #dee2e6;
+  transition: background .3s ease-in;
+} 
+
+.table table td:first-child {
+  width: 4rem;
+}
+
+.table table td:last-child {
+  width: 12rem;
+}
+
+.btn {
+  font-size: .75rem;
+  font-weight: bold;
+  transition: opacity .3s ease-in;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: .8;
+}
+
+.btn.edit {
+  color: var(--green);
+}
+
+.btn.delete {
+  color: var(--red);
+}

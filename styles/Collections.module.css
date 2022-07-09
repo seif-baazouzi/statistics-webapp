@@ -77,3 +77,9 @@
   box-shadow: var(--shadow);
   background-color: var(--white);
 }
+
+@media screen and (min-width: 520px) {
+  .selectCollection {
+    justify-content: flex-end;
+  }
+}
