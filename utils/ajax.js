@@ -30,8 +30,9 @@ const sample = async (path, headers, body, method) => {
   return await res.json()
 }
 
-const put  = (path, headers={}, body={}) => sample(path, headers, body, "PUT")
-const post = (path, headers={}, body={}) => sample(path, headers, body, "POST")
-const del  = (path, headers={}, body={}) => sample(path, headers, body, "DELETE")
+const put   = (path, headers={}, body={}) => sample(path, headers, body, "PUT")
+const post  = (path, headers={}, body={}) => sample(path, headers, body, "POST")
+const patch = (path, headers={}, body={}) => sample(path, headers, body, "PATCH")
+const del   = (path, headers={}, body={}) => sample(path, headers, body, "DELETE")
 
-export default { get, post, put, del }
+export default { get, post, put, patch, del }

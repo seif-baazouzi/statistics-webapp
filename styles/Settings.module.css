@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  max-width: 768px;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: .25rem;
+  background-color: var(--white);
+}
+
+.spacer {
+  width: 90%;
+  height: .25rem;
+  margin: 3rem auto;
+  background-color: var(--gray);
+}

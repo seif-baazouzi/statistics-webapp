@@ -5,6 +5,7 @@ import LogoutIcon from "@heroicons/react/outline/LogoutIcon"
 import ChartPieIcon from "@heroicons/react/outline/ChartPieIcon"
 import CollectionIcon from "@heroicons/react/outline/CollectionIcon"
 import ViewListIcon from "@heroicons/react/outline/ViewListIcon"
+import CogIcon from "@heroicons/react/outline/CogIcon"
 
 import { clearCookies } from "../utils/cookies"
 import styles from "../styles/SideBar.module.css"
@@ -29,6 +30,9 @@ function SideBar() {
         <ChartPieIcon className={router.pathname === "/statistics" ? styles.active : ""} />
       </Link>
       <div className={styles.separator}></div>
+      <Link href="/settings">
+        <CogIcon className={router.pathname === "/settings" ? styles.active : ""} />
+      </Link>
       <LogoutIcon onClick={logout} />
     </div>
   )
