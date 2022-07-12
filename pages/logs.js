@@ -6,6 +6,7 @@ import Page from "@/components/Page"
 import SelectCollection from "@/components/collections/select"
 import Logs from "@/components/logs"
 import AddPopup from "@/components/logs/add"
+import Pagination from "@/components/Pagination"
 
 import ajax from "@/utils/ajax"
 import { apiServer } from "@/config/index"
@@ -17,21 +18,24 @@ export default function LogsPage({ collectionsList }) {
   const [showAddPopup, setShowAddPopup] = useState(false)
 
   const [logs, setLogs] = useState([])
+  const [index, setIndex] = useState(1)
+  const [pages, setPages] = useState(0)
   const [selectedCollection, setSelectedCollection] = useState(collectionsList[0]?.collectionID)
 
   useEffect(() => {
     (async () => {
       if(!selectedCollection) return
 
-      const res = await ajax.get(`/logs/${selectedCollection}`)
+      const res = await ajax.get(`/logs/${selectedCollection}?page=${index}`)
       
       if(res.message === "invalid-token") {
         router.push("/login")
       } else {
         setLogs(res.logs)
+        setPages(res.pages)
       }
     })()
-  }, [ selectedCollection ])
+  }, [ selectedCollection, index ])
 
   const showPageContent = () => {
     if(collectionsList.length === 0) {
@@ -69,6 +73,10 @@ export default function LogsPage({ collectionsList }) {
           logs={logs}
           setLogs={setLogs}
           collectionID={selectedCollection}
+        />
+        <Pagination
+          indexState={[index, setIndex]}
+          pagesState={[pages, setPages]}
         />
       </>
     )
