@@ -49,7 +49,7 @@ export default function StatisticsPage({ collectionsList }) {
 
   return (
     <>
-      <Page title="Statistics - Logs List">
+      <Page title="Statistics - Statistics Charts">
         <div className={styles.topBar}>
           <SelectDate
             dateState={[date, setDate]}
