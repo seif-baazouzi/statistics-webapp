@@ -1,5 +1,30 @@
 import { getRandomColor } from "./colors";
 
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+]
+
+function getNameFromDate(date) {
+  console.log(date.length);
+  if(date.length === 10) { // month or week
+    return "Day " + date.substring(8)
+  }
+
+  // year
+  return months[parseInt(date)-1]
+}
+
 export function getBarChartData(statistics) {
   const labels = []
   const results = []
@@ -12,7 +37,7 @@ export function getBarChartData(statistics) {
   }
 
   for(const date in statistics) {
-    const row = { name: date }
+    const row = { name: getNameFromDate(date) }
 
     if(isEmpty && statistics[date].length !== 0) isEmpty = false
 
@@ -28,8 +53,8 @@ export function getBarChartData(statistics) {
   }
 
   const labelsColors = []
-  for(const label of labels) {
-    labelsColors.push({ label, color: getRandomColor() })
+  for(let index=0; index<labels.length; index++) {
+    labelsColors.push({ label: labels[index], color: getRandomColor(index) })
   }
 
   return [ labelsColors, results, isEmpty ]
